@@ -39,6 +39,8 @@ public class ThinklanceIntegration extends Application {
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
+        
+        //Test Commit
     }
 
     /**
