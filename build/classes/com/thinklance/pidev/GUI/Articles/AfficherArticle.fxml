@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane id="AnchorPane" prefHeight="688.0" prefWidth="941.0" styleClass="anchor-pane" stylesheets="@../../css/AjouterArticle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thinklance.pidev.GUI.Articles.AfficherArticleController">
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="689.0" prefWidth="942.0">
+         <children>
+            <ImageView fx:id="imageArticle" fitHeight="138.0" fitWidth="266.0" layoutX="372.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ressourses/ImageArticlePlaceHolder.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="dateLabel" layoutX="20.0" layoutY="137.0" text="dateLabel" />
+            <Label fx:id="utilisateurLabel" layoutX="293.0" layoutY="137.0" onMouseClicked="#naviguerVersProfilAuteur" text="Utilisateur" />
+            <JFXButton fx:id="btnRetour" buttonType="RAISED" layoutX="791.0" layoutY="643.0" onAction="#retournerVersListeArticles" stylesheets="@../../css/AjouterArticle.css" text="Retour">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LONG_ARROW_LEFT" />
+               </graphic>
+            </JFXButton>
+            <Label fx:id="titreLabel" layoutX="26.0" layoutY="37.0" scaleX="2.0" scaleY="2.0" text="Titre" />
+            <ScrollPane layoutX="20.0" layoutY="163.0" prefHeight="479.0" prefWidth="890.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="474.0" prefWidth="941.0">
+                     <children>
+                        <TextFlow layoutX="-8.0" prefHeight="470.0" prefWidth="880.0">
+                           <children>
+                              <JFXTextArea fx:id="texteArticle" editable="false" prefHeight="467.0" prefWidth="892.0" />
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label fx:id="typeArticle" layoutX="20.0" layoutY="75.0" text="Type" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="712.0" prefWidth="1078.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thinklance.pidev.GUI.TypeArticle.ListeTypesArticlesController">
+   <children>
+      <VBox prefHeight="712.0" prefWidth="1185.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressourses/ListeArticlesIcone.png" />
+                     </image>
+                  </ImageView>
+                  <Label scaleX="2.0" scaleY="2.0" text="Liste des Types d'articles">
+                     <HBox.margin>
+                        <Insets left="80.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <JFXButton fx:id="btnAjouterTypeArticle" buttonType="RAISED" onAction="#ajouterTypeArticle" stylesheets="@../../css/ListeArticles.css" text="Ajouter">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="450.0" top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+            <TableView fx:id="tableTypeAritcles" prefHeight="498.0" prefWidth="1185.0">
+              <columns>
+                <TableColumn fx:id="idTypeArticleColonne" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nomTypeArticleColonne" prefWidth="226.0" text="Nom" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

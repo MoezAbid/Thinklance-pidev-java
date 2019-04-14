@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorMere" prefHeight="746.0" prefWidth="1200.0" style="-fx-background-color: #FFF;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thinklance.pidev.GUI.ListFreelancersController">
+<AnchorPane fx:id="AnchorPane" layoutX="230.0" layoutY="-9.0" prefHeight="808.0" prefWidth="971.0">
+   
+</AnchorPane>
+   <JFXSlider fx:id="prixmin" layoutX="21.0" layoutY="261.0" prefHeight="14.0" prefWidth="135.0" />
+   <JFXSlider fx:id="prixmax" layoutX="21.0" layoutY="317.0" prefWidth="135.0" />
+   <Label layoutX="18.0" layoutY="235.0" text="Prix minimale " textFill="#1898bc">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Label>
+   <Label layoutX="18.0" layoutY="288.0" text="Prix maximale" textFill="#1898bc">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Label>
+   <Label layoutX="19.0" layoutY="360.0" text="Disponibilité">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font></Label>
+   <JFXToggleButton fx:id="disponibilite" layoutX="-1.0" layoutY="379.0" prefHeight="37.0" prefWidth="220.0" text="À temps plein uniquement" />
+   <Label layoutX="18.0" layoutY="30.0" prefHeight="17.0" prefWidth="78.0" text="Filtres">
+      <font>
+         <Font name="System Bold" size="19.0" />
+      </font>
+   </Label>
+   <Separator layoutX="14.0" layoutY="58.0" prefHeight="3.0" prefWidth="151.0" />
+   <Label layoutX="16.0" layoutY="205.0" prefHeight="20.0" prefWidth="74.0" text="Tarif/Jour">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Separator layoutX="18.0" layoutY="197.0" prefHeight="3.0" prefWidth="151.0" />
+   <Separator layoutX="24.0" layoutY="427.0" prefHeight="3.0" prefWidth="151.0" />
+   <Separator layoutX="15.0" layoutY="350.0" prefHeight="3.0" prefWidth="151.0" />
+   <JFXComboBox fx:id="searchpays" focusColor="#14bdee" layoutX="16.0" layoutY="105.0" prefHeight="25.0" prefWidth="135.0" promptText="Pays" />
+   <JFXComboBox fx:id="searchRegion" focusColor="#14bdee" layoutX="16.0" layoutY="152.0" prefHeight="25.0" prefWidth="135.0" promptText="Ville" />
+   <Label layoutX="16.0" layoutY="75.0" prefHeight="20.0" prefWidth="98.0" text="Emplacement">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="18.0" layoutY="92.0" textFill="#1898bc">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label layoutX="23.0" layoutY="449.0" prefHeight="20.0" prefWidth="78.0" text="Catégorie">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <JFXCheckBox fx:id="catDevelopement" layoutX="17.0" layoutY="481.0" text="Développeurs, Intégrateurs " />
+   <JFXCheckBox fx:id="catDesigners" layoutX="17.0" layoutY="508.0" text="Designers  &amp; Réalisateurs" />
+   <JFXCheckBox fx:id="catRedacteurs" layoutX="17.0" layoutY="534.0" text="Rédacteurs,Traducteurs," />
+   <JFXCheckBox fx:id="catGraphistes" layoutX="18.0" layoutY="562.0" prefHeight="18.0" prefWidth="151.0" text="Graphistes, Designers" />
+   <JFXCheckBox fx:id="CatChefsprojets" layoutX="19.0" layoutY="591.0" text="Chefs de Projet &amp; Coachs Agile" />
+   <JFXCheckBox fx:id="CatConsultants" layoutX="20.0" layoutY="620.0" text="Consultants en Stratégie" />
+   <Separator layoutX="206.0" layoutY="-25.0" orientation="VERTICAL" prefHeight="828.0" prefWidth="22.0" />
+</AnchorPane>

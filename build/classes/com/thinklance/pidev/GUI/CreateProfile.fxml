@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750" prefWidth="1200" stylesheets="@../css/stylee.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thinklance.pidev.GUI.CreateProfileController">
+<AnchorPane>
+    <children>
+        <TabPane fx:id="TabPaneCreateProfile" layoutX="-3.0" layoutY="-3.0" prefHeight="748.0" prefWidth="1205.0" style="-fx-background-color: #FFF;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="TabInformationsPersonnelles" text="Informations personnelles">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                
+                                <JFXButton id="btn1" fx:id="btnNextCategories" layoutX="1141.0" layoutY="650.0" onAction="#NextCategories" styleClass="btn-create-profile" text="&gt;" textFill="WHITE" />
+                        <AnchorPane fx:id="AnchorPane" prefHeight="632.0" prefWidth="1204.0">
+                           <children>
+                              <AnchorPane layoutX="352.0" layoutY="231.0" prefHeight="343.0" prefWidth="500.0">
+                                 <children>
+                                    <JFXTextField fx:id="titreprofil" focusColor="#48a5ea" layoutX="1.0" layoutY="4.0" prefHeight="40.0" prefWidth="270.0" promptText="Titre profil">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="tarif" focusColor="#48a5ea" layoutX="1.0" layoutY="170.0" prefHeight="40.0" prefWidth="130.0" promptText="Tarif Moyen/Jour" style="-fx-font-size: 16;" />
+                                    <JFXComboBox fx:id="pays" focusColor="#48a5ea" layoutX="1.0" layoutY="51.0" prefHeight="40.0" prefWidth="270.0" promptText="Pays" style="-fx-font-size: 16;" />
+                                    <JFXComboBox fx:id="ville" focusColor="#48a5ea" layoutX="1.0" layoutY="113.0" prefHeight="40.0" prefWidth="270.0" promptText="Ville" style="-fx-font-size: 16;" />
+                                    <JFXButton fx:id="btn_refrech" layoutX="120.0" layoutY="306.0" onMouseClicked="#reset_fields_info_perso" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Rafraîchir" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton layoutX="265.0" layoutY="306.0" onAction="#btn_valider" onMouseClicked="#valider_info_perso" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Enregistrer" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXTextArea fx:id="description" focusColor="#48a5ea" layoutY="219.0" prefHeight="66.0" prefWidth="270.0" promptText="Description">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXTextArea>
+                                    <ImageView fx:id="image_profil" fitHeight="142.0" fitWidth="150.0" layoutX="350.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../ressourses/user.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btn_choisir" layoutX="350.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#select_image" prefHeight="25.0" prefWidth="150.0" text="Choisir un fichier" />
+                                    <JFXTextField fx:id="tarifReel" focusColor="#48a5ea" layoutX="142.0" layoutY="170.0" prefHeight="40.0" prefWidth="130.0" promptText="Tarif calculé" style="-fx-font-size: 16;" />
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="60.0" layoutY="70.0" text="Informations personnelles" textFill="#48a5ea">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="50.0" layoutY="100.0" prefHeight="1.0" prefWidth="1105.0" />
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="TabCategories" text="Catègories">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <JFXButton id="btn1" fx:id="btnPreviousInformationsPersonnelles" layoutX="40.0" layoutY="650.0" onAction="#PreviousInformationsPersonnelles" styleClass="btn-create-profile" text="&lt;" textFill="WHITE" />
+                                <JFXButton id="btn1" fx:id="btnNextCompetences" layoutX="1141.0" layoutY="650.0" onAction="#NextCompetences" styleClass="btn-create-profile" text="&gt;" textFill="WHITE" />
+                        <HBox layoutX="153.0" layoutY="150.0" prefHeight="200.0" prefWidth="900.0" spacing="4.0">
+                           <children>
+                              <AnchorPane fx:id="developpeursIntegrateurs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#developpeurscat" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #F4F4F4; -fx-opacity: 1;" styleClass="tile">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="120.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../ressourses/web-programming%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="70.0" layoutY="105.0" prefHeight="38.0" prefWidth="160.0" text="Développeurs, Intégrateurs " textFill="#0a0a0a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="100.0" layoutY="140.0" prefHeight="38.0" prefWidth="100.0" text="&amp; Data scientists" textFill="#0a0a0a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="designers" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#designerscateg" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #F4F4F4; -fx-opacity: 1;" styleClass="tile">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="120.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../ressourses/photo-camera%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="52.5" layoutY="105.0" prefHeight="38.0" prefWidth="195.0" text="Motion  Designers  &amp; Réalisateurs" textFill="#0a0a0a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="redacteurs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#redecateurcat" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #F4F4F4; -fx-opacity: 1;" styleClass="tile">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="120.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../ressourses/comment%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="80.0" layoutY="105.0" prefHeight="38.0" prefWidth="140.0" text="Rédacteurs,Traducteurs," textFill="#0a0a0a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="80.0" layoutY="140.0" prefHeight="38.0" prefWidth="140.0" text="&amp; Community Managers" textFill="#0a0a0a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="153.0" layoutY="390.0" prefHeight="200.0" prefWidth="900.0" spacing="4.0">
+                           <children>
+                              <AnchorPane fx:id="graphistes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#graphistescateg" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #F4F4F4; -fx-opacity: 1;" styleClass="tile">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="120.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../ressourses/paint-brush%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="87.5" layoutY="105.0" prefHeight="38.0" prefWidth="125.0" text="Graphistes, Designers" textFill="#0a0a0a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="100.0" layoutY="140.0" prefHeight="38.0" prefWidth="100.0" text="&amp; Photographes" textFill="#0a0a0a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="Chefprojet" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#chefprojetcateg" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #F4F4F4; -fx-opacity: 1;" styleClass="tile">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="120.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../ressourses/calendar%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="60.0" layoutY="105.0" prefHeight="38.0" prefWidth="180.0" text="Chefs de Projet &amp; Coachs Agile" textFill="#0a0a0a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                              <AnchorPane fx:id="consultants" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#consultantsstrategiescat" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #F4F4F4; -fx-opacity: 1;" styleClass="tile">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="120.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../ressourses/greek-temple%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="4.0" layoutY="72.0" prefHeight="26.0" prefWidth="93.0" textFill="WHITE" />
+                                    <Label layoutX="77.5" layoutY="105.0" prefHeight="38.0" prefWidth="145.0" text="Consultants en Stratégie," textFill="#0a0a0a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="75.5" layoutY="140.0" prefHeight="38.0" prefWidth="150.0" text="Progiciel, Communication" textFill="#0a0a0a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <Label layoutX="60.0" layoutY="70.0" prefHeight="30.0" prefWidth="111.0" text="Catégories" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="50.0" layoutY="100.0" prefHeight="1.0" prefWidth="1105.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="TabCompetences" text="Compétences">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <JFXButton id="btn1" fx:id="btnPreviousCategories" layoutX="40.0" layoutY="650.0" onAction="#PreviousCategories" styleClass="btn-create-profile" text="&lt;" textFill="WHITE" />
+                                <JFXButton id="btn1" fx:id="btnNext" layoutX="1141.0" layoutY="650.0" onAction="#NextFormations" styleClass="btn-create-profile" text="&gt;" textFill="WHITE" />
+                        <Label layoutX="60.0" layoutY="70.0" text="Compétences" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="50.0" layoutY="100.0" prefHeight="1.0" prefWidth="1105.0" />
+                        <AnchorPane layoutX="353.0" layoutY="213.0" prefHeight="315.0" prefWidth="530.0">
+                           <children>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="listView" onKeyReleased="#listViewMouseClick" onMouseClicked="#listViewMouseClick" prefHeight="250.0" prefWidth="200.0" style="-fx-background-insets: 1; -fx-padding: 1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton fx:id="btn_refrech1" layoutX="125.0" layoutY="280.0" onMouseClicked="#reset_listview_competences" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Rafraîchir" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton layoutX="275.0" layoutY="280.0" onAction="#valider_competences" onMouseClicked="#valider_info" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Enregistrer" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <HBox layoutX="210.0" layoutY="79.0" prefHeight="42.0" prefWidth="180.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton fx:id="create" layoutX="10.0" mnemonicParsing="false" onAction="#createAction" prefHeight="42.0" prefWidth="30.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                          <graphic>
+                                             <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                   <Image url="@../ressourses/plus.png" />
+                                                </image>
+                                             </ImageView>
+                                          </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="save" mnemonicParsing="false" onAction="#saveAction" prefHeight="42.0" prefWidth="30.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                          <graphic>
+                                             <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                   <Image url="@../ressourses/pencil.png" />
+                                                </image>
+                                             </ImageView>
+                                          </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="delete" mnemonicParsing="false" onAction="#deleteAction" prefHeight="40.0" prefWidth="7.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                          <graphic>
+                                             <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                   <Image url="@../ressourses/cancel.png" />
+                                                </image>
+                                             </ImageView>
+                                          </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <JFXTextField fx:id="name" focusColor="#14bdee" layoutX="210.0" layoutY="23.0" prefHeight="36.0" prefWidth="287.0" promptText="Saisir votre compétence">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                                 <JFXSlider fx:id="progressval" layoutX="207.0" layoutY="193.0" style="-fx-progress-color: #14bdee;" />
+                                 <Label layoutX="210.0" layoutY="142.0" prefHeight="26.0" prefWidth="212.0" text="Degré de votre compétence :">
+                                    <font>
+                                       <Font size="14.0" />
+                                    </font>
+                                 </Label>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="TabFormations" text="Formations">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <JFXButton id="btn1" fx:id="btnPreviousCompetences" layoutX="40.0" layoutY="650.0" onAction="#PreviousCompetences" styleClass="btn-create-profile" text="&lt;" textFill="WHITE" />
+                                <JFXButton id="btn1" fx:id="btnNextExperiencesProfessionnelles" layoutX="1141.0" layoutY="650.0" onAction="#NextExperiencesProfessionnelles" styleClass="btn-create-profile" text="&gt;" textFill="WHITE" />
+                        <Label layoutX="60.0" layoutY="70.0" text="Formations" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="50.0" layoutY="100.0" prefHeight="1.0" prefWidth="1105.0" />
+                        <AnchorPane layoutX="502.5" layoutY="166.0" prefHeight="409.0" prefWidth="280.0">
+                           <children>
+                              <JFXTextField fx:id="titreformation" focusColor="#48a5ea" prefHeight="35.0" prefWidth="280.0" promptText="Titre Formation">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton fx:id="btn_refrech2" layoutY="370.0" onMouseClicked="#reset_fields_formations" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Rafraîchir" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton layoutX="150.0" layoutY="370.0" onAction="#btn_valider" onMouseClicked="#valider_formations" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Enregistrer" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXTextArea fx:id="descriptionforma" focusColor="#48a5ea" layoutY="245.0" prefHeight="100.0" prefWidth="280.0" promptText="Description">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextArea>
+                              <JFXDatePicker fx:id="datedebutform" defaultColor="#14bdee" layoutY="125.0" prefHeight="35.0" prefWidth="280.0" promptText="Date de début" style="-fx-font-size: 16;" />
+                              <JFXDatePicker fx:id="datefinform" defaultColor="#14bdee" layoutY="185.0" prefHeight="35.0" prefWidth="280.0" promptText="Date de fin" style="-fx-font-size: 16;" />
+                              <JFXTextField fx:id="institution" focusColor="#48a5ea" layoutY="65.0" prefHeight="35.0" prefWidth="280.0" promptText="Institution">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="TabExperiencesProfessionnelles" text="Expériences professionnelles">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <JFXButton id="btn1" fx:id="btnPrevious" layoutX="40.0" layoutY="650.0" onAction="#PreviousFormations" styleClass="btn-create-profile" text="&lt;" textFill="WHITE" />
+                                <JFXButton id="btn1" fx:id="btnNextPotfolio" layoutX="1141.0" layoutY="650.0" onAction="#NextPotfolio" styleClass="btn-create-profile" text="&gt;" textFill="WHITE" />
+                        <Label layoutX="60.0" layoutY="70.0" text="Expériences professionnelles" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="50.0" layoutY="100.0" prefHeight="1.0" prefWidth="1105.0" />
+                        <AnchorPane layoutX="502.5" layoutY="166.0">
+                           <children>
+                              <JFXTextField fx:id="titreexperience" focusColor="#48a5ea" prefHeight="35.0" prefWidth="280.0" promptText="Titre Expérience">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton fx:id="btn_refrech3" layoutY="370.0" onMouseClicked="#reset_fields_experience" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Rafraîchir" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton layoutX="150.0" layoutY="370.0" onAction="#btn_valider" onMouseClicked="#valider_info_experience" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Enregistrer" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXTextArea fx:id="descriptionexperience" focusColor="#48a5ea" layoutY="245.0" prefHeight="100.0" prefWidth="280.0" promptText="Description">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextArea>
+                              <JFXDatePicker fx:id="datedebutexperience" defaultColor="#14bdee" layoutY="125.0" prefHeight="35.0" prefWidth="280.0" promptText="Date de début" style="-fx-font-size: 16;" />
+                              <JFXDatePicker fx:id="datefinexperience" defaultColor="#14bdee" layoutY="185.0" prefHeight="35.0" prefWidth="280.0" promptText="Date de fin" style="-fx-font-size: 16;" />
+                              <JFXTextField fx:id="entreprise" focusColor="#48a5ea" layoutY="65.0" prefHeight="35.0" prefWidth="280.0" promptText="Entreprise">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="TabPotfolio" text="Potfolio">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <JFXButton id="btn1" fx:id="btnPreviousExperiencesProfessionnelles" layoutX="40.0" layoutY="650.0" onAction="#PreviousExperiencesProfessionnelles" styleClass="btn-create-profile" text="&lt;" textFill="WHITE" />
+                                <JFXButton id="btn1" fx:id="btnNextLangue" layoutX="1141.0" layoutY="650.0" onAction="#NextLangue" styleClass="btn-create-profile" text="&gt;" textFill="WHITE" />
+                        <Label layoutX="60.0" layoutY="70.0" text="Potfolio" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="50.0" layoutY="100.0" prefHeight="1.0" prefWidth="1105.0" />
+                        <AnchorPane fx:id="anchorportfolio" layoutX="359.0" layoutY="166.0" prefHeight="400.0" prefWidth="729.0">
+                           <children>
+                              <JFXButton fx:id="selectimageprotfolio" layoutX="222.0" layoutY="120.0" onAction="#selectImagePotfolio" onMouseClicked="#reset_fields" prefHeight="212.0" prefWidth="238.0" style="-fx-background-color: transparent;" text="Choisir un fichier" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                    <graphic>
+                                    <ImageView fx:id="files" fitHeight="200.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../ressourses/upload.png" />
+                                       </image>
+                                    </ImageView>
+                                    </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_valider_portfolio" layoutX="319.0" layoutY="332.0" onAction="#btn_valider" onMouseClicked="#valider_iportfolio" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Enregistrer" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                                 <JFXButton fx:id="btn_valider_portfolio1" layoutX="171.0" layoutY="332.0" onMouseClicked="#rafraichir_portfolio" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Rafraîchir" textFill="WHITE">
+                                    <font>
+                                       <Font size="16.0" />
+                                    </font>
+                                 </JFXButton>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="TabLangue" text="Langue">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <JFXButton id="btn1" fx:id="btnPreviousPotfolio" layoutX="40.0" layoutY="650.0" onAction="#PreviousPotfolio" styleClass="btn-create-profile" text="&lt;" textFill="WHITE" />
+                        <Label layoutX="60.0" layoutY="70.0" text="Langues" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="50.0" layoutY="100.0" prefHeight="1.0" prefWidth="1105.0" />
+                        <AnchorPane layoutX="353.0" layoutY="213.0" prefHeight="315.0" prefWidth="530.0">
+                           <children>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="listView1" onKeyReleased="#listViewMouseClick" onMouseClicked="#listViewMouseClick" prefHeight="250.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton fx:id="btn_refrech11" layoutX="125.0" layoutY="280.0" onMouseClicked="#reset_fields" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Rafraîchir" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton layoutX="275.0" layoutY="280.0" onAction="#btn_valider" onMouseClicked="#valider_info" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #14bdee;" text="Enregistrer" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <HBox layoutX="210.0" layoutY="161.0" prefHeight="40.0" prefWidth="320.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton fx:id="create1" layoutX="10.0" mnemonicParsing="false" onAction="#createAction" prefHeight="40.0" prefWidth="100.0" text="Ajouter">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="save1" mnemonicParsing="false" onAction="#saveAction" prefHeight="40.0" prefWidth="100.0" text="Modifier">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="delete1" mnemonicParsing="false" onAction="#deleteAction" prefHeight="40.0" prefWidth="100.0" text="Supprimer">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <JFXTextField fx:id="Langue" focusColor="#14bdee" layoutX="210.0" layoutY="52.0" prefHeight="40.0" prefWidth="320.0" promptText="Langue">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
+</StackPane>

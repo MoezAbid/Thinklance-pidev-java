@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="946.0" style="-fx-background-color: #FFF;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thinklance.pidev.GUI.ListeFEPController">
+    <children>
+        <TabPane fx:id="TabPaneListeFEP" prefHeight="680.0" prefWidth="946.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="Freelancers" text="Freelancers">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="699.0" prefWidth="946.0">
+                            <children>
+                        <Label layoutX="339.5" layoutY="20.0" text="Liste des Freelancers" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="btn1" fx:id="btnNextEmployeurs" layoutX="875.0" layoutY="20.0" onAction="#NextEmployeurs" styleClass="btn-create-profile" text="&gt;" textFill="WHITE" />
+                        <AnchorPane fx:id="anchorMere" layoutY="70.0" prefHeight="688.0" prefWidth="953.0" style="-fx-background-color: #FFF;" stylesheets="@../css/style.css">
+                           <children>
+                              <AnchorPane fx:id="AnchorPane" layoutX="245.0" layoutY="5.0" prefHeight="615.0" prefWidth="708.0" style="-fx-background-color: #FFF;" />
+                              <JFXSlider fx:id="prixmin" layoutX="21.0" layoutY="228.0" prefHeight="14.0" prefWidth="135.0" />
+                              <JFXSlider fx:id="prixmax" layoutX="21.0" layoutY="273.0" prefWidth="135.0" />
+                              <Label layoutX="18.0" layoutY="204.0" text="Prix minimale " textFill="#1898bc">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="248.0" text="Prix maximale" textFill="#1898bc">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="19.0" layoutY="301.0" text="Disponibilité">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXToggleButton fx:id="disponibilite" layoutX="-1.0" layoutY="306.0" prefHeight="37.0" prefWidth="220.0" text="À temps plein uniquement" />
+                              <Label layoutX="18.0" layoutY="-1.0" prefHeight="17.0" prefWidth="78.0" text="Filtres">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="14.0" layoutY="27.0" prefHeight="3.0" prefWidth="151.0" />
+                              <Label layoutX="16.0" layoutY="174.0" prefHeight="20.0" prefWidth="74.0" text="Tarif/Jour">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="18.0" layoutY="166.0" prefHeight="3.0" prefWidth="151.0" />
+                              <Separator layoutX="24.0" layoutY="355.0" prefHeight="3.0" prefWidth="151.0" />
+                              <Separator layoutX="15.0" layoutY="297.0" prefHeight="3.0" prefWidth="151.0" />
+                              <JFXComboBox fx:id="searchpays" focusColor="#14bdee" layoutX="16.0" layoutY="74.0" prefHeight="25.0" prefWidth="135.0" promptText="Pays" />
+                              <JFXComboBox fx:id="searchRegion" focusColor="#14bdee" layoutX="16.0" layoutY="121.0" prefHeight="25.0" prefWidth="135.0" promptText="Ville" />
+                              <Label layoutX="16.0" layoutY="44.0" prefHeight="20.0" prefWidth="98.0" text="Emplacement">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="61.0" textFill="#1898bc">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="23.0" layoutY="372.0" prefHeight="20.0" prefWidth="78.0" text="Catégorie">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXCheckBox fx:id="catDevelopement" layoutX="17.0" layoutY="404.0" text="Développeurs, Intégrateurs " />
+                              <JFXCheckBox fx:id="catDesigners" layoutX="17.0" layoutY="431.0" text="Designers  &amp; Réalisateurs" />
+                              <JFXCheckBox fx:id="catRedacteurs" layoutX="17.0" layoutY="457.0" text="Rédacteurs,Traducteurs," />
+                              <JFXCheckBox fx:id="catGraphistes" layoutX="17.0" layoutY="485.0" prefHeight="18.0" prefWidth="151.0" text="Graphistes, Designers" />
+                              <JFXCheckBox fx:id="CatChefsprojets" layoutX="17.0" layoutY="514.0" text="Chefs de Projet &amp; Coachs Agile" />
+                              <JFXCheckBox fx:id="CatConsultants" layoutX="17.0" layoutY="543.0" text="Consultants en Stratégie" />
+                              <Separator layoutX="230.0" layoutY="3.0" orientation="VERTICAL" prefHeight="611.0" prefWidth="22.0" />
+                           </children>
+                        </AnchorPane>
+                                 </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="Employeurs" text="Employeurs">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="739.0" prefWidth="946.0">
+                     <children>
+                        <Label layoutX="389.0" layoutY="38.0" text="Employeurs" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="btn1" fx:id="btnNextCategories1" layoutX="868.0" layoutY="28.0" onAction="#NextProjets" styleClass="btn-create-profile" text="&gt;" textFill="WHITE" />
+                        <JFXButton id="btn1" fx:id="btnPreviousInformationsPersonnelles1" layoutX="50.0" layoutY="28.0" onAction="#previousFreelancers" styleClass="btn-create-profile" text="&lt;" textFill="WHITE" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="Projets" text="Projets">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="739.0" prefWidth="1148.0">
+                     <children>
+                        <Label layoutX="491.0" layoutY="38.0" text="Projets" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="btn1" fx:id="btnPreviousInformationsPersonnelles" layoutX="50.0" layoutY="28.0" onAction="#PreviousEmployeurs" styleClass="btn-create-profile" text="&lt;" textFill="WHITE" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

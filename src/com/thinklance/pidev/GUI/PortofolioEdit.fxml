@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="949.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="14.0" layoutY="47.0" prefHeight="370.0" prefWidth="896.0" style="-fx-background-color: #fff;">
+         <children>
+            <Separator layoutX="30.0" layoutY="55.0" prefHeight="19.0" prefWidth="763.0" />
+            <Label layoutX="30.0" layoutY="28.0" text="Portfolio" textFill="#171717">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="535.0" layoutY="288.0" prefHeight="34.0" prefWidth="267.0" ripplerFill="WHITE" style="-fx-background-color: #14bdee;" text="Enregistrer vos informations" textFill="#fff9f9">
+                  <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+            </JFXButton>
+            <Pane layoutY="343.0" prefHeight="27.0" prefWidth="896.0" style="-fx-background-color: #F0F0F0;" />
+            <ImageView fitHeight="131.0" fitWidth="170.0" layoutX="105.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressourses/user.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="289.0" layoutY="112.0" prefHeight="34.0" prefWidth="190.0" ripplerFill="WHITE" style="-fx-background-color: #14bdee;" text="Choisir une image" textFill="#fff9f9">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

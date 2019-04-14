@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="612.0" prefWidth="1183.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thinklance.pidev.GUI.Projet.ListeProjetFrController">
+   <children>
+      <ImageView fx:id="img" fitHeight="736.0" fitWidth="1204.0">
+         <image>
+            <Image url="@../../../../img/fond.jpg" />
+         </image>
+      </ImageView>
+    <AnchorPane layoutX="438.0" minHeight="0.0" minWidth="0.0" prefHeight="95.0" prefWidth="216.0" />
+      <Label layoutX="452.0" layoutY="24.0" prefHeight="41.0" prefWidth="192.0" text="Afficher Liste des Projets" textAlignment="CENTER" textFill="#596adf">
+         <font>
+           
+         </font>
+      </Label>
+      <TableView fx:id="tableProjet" layoutX="37.0" layoutY="105.0" onMouseClicked="#afficheDteailsProjet" prefHeight="353.0" prefWidth="1109.0">
+        <columns>
+          <TableColumn fx:id="col_id_projet" prefWidth="40.0" text="ID" />
+          <TableColumn fx:id="col_employeur" prefWidth="126.0" text="ID_EMPLOYEUR" />
+            <TableColumn fx:id="col_freelancer" minWidth="0.0" prefWidth="123.0" text="ID_FREELANCER" />
+            <TableColumn fx:id="col_titreprojet" prefWidth="118.0" text="TITRE PROJET" />
+            <TableColumn fx:id="col_description" minWidth="0.0" prefWidth="105.0" text="DESCRIPTION" />
+            <TableColumn fx:id="col_nbrejours" minWidth="0.0" prefWidth="153.0" text="NEMBRE DE JOURS" />
+            <TableColumn fx:id="col_prix" prefWidth="97.0" text="Prix" />
+            <TableColumn fx:id="col_id_categorie" minWidth="0.0" prefWidth="102.0" text="CATEGORIE" />
+            <TableColumn fx:id="col_nomfichiers" prefWidth="78.0" text="Fichier" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

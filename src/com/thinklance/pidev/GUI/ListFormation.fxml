@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="95.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="titreformation" alignment="TOP_LEFT" layoutX="58.0" layoutY="2.0" prefHeight="25.0" prefWidth="276.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #000000;" text="Noucha" />
+      <ImageView fx:id="image_profile" fitHeight="62.0" fitWidth="47.0" layoutY="2.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressourses/students-cap.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="descriptionformation" alignment="TOP_LEFT" layoutX="57.0" layoutY="44.0" prefHeight="47.0" prefWidth="276.0" style="-fx-font-size: 14; -fx-font-weight: regular; -fx-text-fill: #000000;" text="Noucha" />
+      <Label fx:id="datedebutdatefin" alignment="TOP_LEFT" layoutX="57.0" layoutY="26.0" prefHeight="25.0" prefWidth="76.0" style="-fx-font-size: 12; -fx-font-weight: regular; -fx-text-fill: #000000;" text="Noucha" />
+      <Label fx:id="institution" alignment="TOP_LEFT" layoutX="131.0" layoutY="23.0" prefHeight="25.0" prefWidth="89.0" style="-fx-font-size: 12; -fx-font-weight: regular; -fx-text-fill: #000000;" text="Noucha" />
+   </children>
+</AnchorPane>

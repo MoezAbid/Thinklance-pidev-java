@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorMere" prefHeight="644.0" prefWidth="940.0" styleClass="login-bg" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thinklance.pidev.GUI.InscriptionController">
+   
+        <children>
+            <AnchorPane fx:id="anchorPane" />
+      <AnchorPane layoutX="210.0" layoutY="52.0" prefHeight="538.0" prefWidth="524.0" style="-fx-background-color: #fff; -fx-background-radius: 10px;">
+          <effect>
+              <DropShadow color="#1e0213" />
+          </effect>
+          <children>
+                  <AnchorPane layoutX="8.0" layoutY="102.0" prefHeight="384.0" prefWidth="505.0" styleClass="login-block">
+                      <children>
+                          <JFXTextField fx:id="nomText" focusColor="#14bdee" labelFloat="true" layoutX="55.0" layoutY="3.0" prefHeight="29.0" prefWidth="192.0" promptText="Nom">
+                     <font>
+                        <Font  size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="prenomText" focusColor="#14bdee" labelFloat="true" layoutX="273.0" layoutY="3.0" prefHeight="29.0" prefWidth="192.0" promptText="Prénom">
+                     <font>
+                        <Font  size="13.0" />
+                     </font>
+                  </JFXTextField>
+                          <JFXTextField fx:id="emailText" focusColor="#14bdee" labelFloat="true" layoutX="55.0" layoutY="69.0" prefHeight="29.0" prefWidth="410.0" promptText="Email">
+                              <font>
+                                  <Font  size="13.0" />
+                              </font>
+                          </JFXTextField>
+                          <JFXPasswordField fx:id="passwordText" focusColor="#14bdee" labelFloat="true" layoutX="55.0" layoutY="139.0" prefHeight="29.0" prefWidth="410.0" promptText="Mot de passe">
+                              <font>
+                                  <Font  size="13.0" />
+                              </font>
+                          </JFXPasswordField>
+                          <JFXButton fx:id="btn_signUp" layoutX="195.0" layoutY="335.0" onMouseClicked="#createaccount" prefHeight="39.0" prefWidth="115.0" styleClass="btn-login" text="Inscription" />
+                  <JFXPasswordField fx:id="passwordVerifText" focusColor="#14bdee" labelFloat="true" layoutX="55.0" layoutY="205.0" prefHeight="29.0" prefWidth="410.0" promptText="Comfirmer mot de passe">
+                     <font>
+                        <Font  size="13.0" />
+                     </font>
+                  </JFXPasswordField>
+                  
+                  <JFXRadioButton fx:id="roleEmployeur" layoutX="292.0" layoutY="267.0" styleClass="radio-jfx-button" text="Employeur">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="roleFreelancer" layoutX="118.0" layoutY="267.0" selected="true" styleClass="radio-jfx-button" text="Freelancer">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label fx:id="labelStatus" layoutY="300.0" prefHeight="30.0" prefWidth="505.0" styleClass="lbl-status-error" textFill="RED">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font></Label>
+                      </children>
+                  </AnchorPane>
+              <Label fx:id="lblLogin"  onMouseClicked="#login" alignment="CENTER" contentDisplay="CENTER" layoutX="89.0" layoutY="493.0" prefHeight="17.0" prefWidth="338.0" text="Vous avez déjà un compte ? Se connecter" textFill="#000000">
+                  <font>
+                      <Font name="System Bold" size="15.0" />
+                  </font>
+         
+                    </Label>
+              <Group layoutX="50.0" layoutY="58.0" />
+              <ImageView fitHeight="97.0" fitWidth="176.0" layoutX="171.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../ressourses/thinklance.png" />
+                  </image>
+              </ImageView>
+          </children>
+      </AnchorPane>
+            
+            
+            
+        </children>
+</AnchorPane>

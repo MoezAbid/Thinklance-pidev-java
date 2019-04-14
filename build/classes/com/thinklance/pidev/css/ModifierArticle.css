@@ -1,0 +1,9 @@
+.jfx-button {
+     -jfx-button-type: RAISED;
+     -fx-background-color: "#4286f4";
+     -fx-text-fill: white;
+}
+
+.anchor-pane {
+    -fx-background-color: linear-gradient(to top right, #ebe9f9, #7eccff);
+}

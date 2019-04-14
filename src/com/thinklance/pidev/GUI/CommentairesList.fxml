@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="106.0" prefWidth="445.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.thinklance.pidev.GUI.CommentairesListController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="73.0" prefWidth="574.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="96.0" prefWidth="345.0" spacing="10.0">
+               <children>
+                  <VBox alignment="TOP_RIGHT" prefHeight="125.0" prefWidth="345.0" style="-fx-border-color: -separator-color; -fx-background-color: -background-color;" styleClass="raised">
+                     <children>
+                        <Label fx:id="nomPrenom" alignment="TOP_LEFT" layoutX="27.0" layoutY="223.0" prefHeight="25.0" prefWidth="276.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #000000;" text="Noucha" />
+                        <Label fx:id="contenucoment" prefHeight="93.0" prefWidth="283.0" style="-fx-font-size: 14; -fx-text-fill: #000000;">
+                           <cursor>
+                              <Cursor fx:constant="MOVE" />
+                           </cursor>
+                        </Label>
+                        <VBox />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="image_profile" fitHeight="63.0" fitWidth="65.0" layoutX="10.0" layoutY="10.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressourses/user.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

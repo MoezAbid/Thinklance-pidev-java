@@ -1,0 +1,15 @@
+.anchor-pane {
+    -fx-background-color: linear-gradient(to top right, #ebe9f9, #7eccff);
+}
+
+.jfx-button {
+     -jfx-button-type: RAISED;
+     -fx-background-color: "#74dc30";
+     -fx-text-fill: white;
+}
+
+.ma-liste-button {
+     -jfx-button-type: RAISED;
+     -fx-background-color: "#4286f4";
+     -fx-text-fill: white;
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<VBox alignment="TOP_CENTER" prefHeight="169.0" prefWidth="421.0" spacing="2.0" style="-fx-background-color: #FFF;" stylesheets="@../../../../../../JavaFXApplication24/src/com/houarizegai/javafxmaterialdesign/resources/css/recyclerview.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thinklance.pidev.GUI.NoterUserController">
+   <children>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <VBox prefWidth="200.0" spacing="5.0">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label styleClass="title" text="Communication" />
+               </children>
+            </VBox>
+            <Rating fx:id="ratecommunication" prefHeight="32.0" prefWidth="203.0" rating="0.0" />
+         </children>
+      </HBox>
+      <Line endX="255.0" stroke="#eeeeee">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Line>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <VBox prefWidth="200.0" spacing="5.0">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label styleClass="title" text="Qualité du travail" />
+               </children>
+            </VBox>
+            <Rating fx:id="rateQualite" prefHeight="32.0" prefWidth="203.0" rating="0.0" />
+         </children>
+      </HBox>
+      <Line endX="255.0" stroke="#eeeeee">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Line>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <VBox prefWidth="200.0" spacing="5.0">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label styleClass="title" text="Respect des délais" />
+               </children>
+            </VBox>
+            <Rating fx:id="ratingrespectdelais" prefHeight="32.0" prefWidth="203.0" rating="0.0" />
+         </children>
+      </HBox>
+      <VBox prefWidth="200.0" spacing="5.0">
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <Separator />
+      <HBox alignment="TOP_RIGHT">
+         <children>
+            <JFXButton fx:id="sortir" onAction="#sortir" styleClass="btn" text="Annuler" textFill="#bd1313">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="enregistrer1" onAction="#enregitrerchoix" styleClass="btn" text="Enregistrer" textFill="#13bf58">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

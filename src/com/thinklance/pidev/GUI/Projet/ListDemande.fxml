@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thinklance.pidev.GUI.Projet.ListDemandeController">
+   <children>
+      <Label layoutX="454.0" layoutY="47.0" prefHeight="21.0" prefWidth="242.0" text="Liste des demandes">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tfR" layoutX="91.0" layoutY="127.0" promptText="Rechercher" />
+      <AnchorPane layoutX="-2.0" layoutY="191.0" prefHeight="287.0" prefWidth="711.0">
+         <children>
+            <TableView fx:id="tableDemande" layoutX="101.0" prefHeight="287.0" prefWidth="953.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="94.0" text="Id " />
+                <TableColumn fx:id="employeur" minWidth="0.0" prefWidth="119.0" text="Employeur" />
+                  <TableColumn fx:id="dateDemande" prefWidth="170.0" text="Date de la demande" />
+                  <TableColumn fx:id="etatdemande" prefWidth="145.0" text="Etat de la demande" />
+                  <TableColumn fx:id="projet" prefWidth="124.0" text="Projet" />
+                  <TableColumn fx:id="freelancer" prefWidth="118.0" text="Freelancer" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="575.0" layoutY="130.0" onMouseClicked="#InterfaceAjoutDemande" style="-fx-background-color: #14bdee;" text="Ajout Demande" visible="false" />
+      <JFXButton fx:id="delete" layoutX="1016.0" layoutY="130.0" onAction="#deleteDemande" prefHeight="30.0" prefWidth="36.0" style="-fx-background-color: #14bdee;" text="-" textAlignment="CENTER">
+         <font>
+            <Font name="Baskerville Old Face" size="22.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lbid" layoutX="46.0" layoutY="41.0" />
+   </children>
+</AnchorPane>
